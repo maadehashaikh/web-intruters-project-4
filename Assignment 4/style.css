@@ -1,0 +1,1377 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+body{
+  background-color: black;
+}
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar h1{
+  font-size: 43px;
+  margin-top: 3%;
+  margin-left: 45px;
+  font-weight: 600;
+  color: #fff; 
+  font-family: "Changa", cursive;
+  font-weight: 500;
+}
+.navBar span{
+  color: rgb(19, 211, 102);
+  font-family: "Changa", cursive;
+  font-weight: 500;
+}
+.navBar ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-top: 55px;
+  font-size: 17px;
+  margin-left: 23%;
+}
+.navBar a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 1px;
+  font-family: "Changa", cursive;
+}
+.navBar a:hover{
+  color:rgb(19, 211, 102);
+  border-bottom: 2px solid rgb(19, 211, 102);
+}
+.navBar li {
+  padding-right: 25px;
+}
+.navBar button{
+  padding: 9px 25px;
+  margin-right: 5%;
+  margin-top: 40px;
+  color: black;
+  font-size: 16px;
+  background-color:rgb(19, 211, 102) ;
+  border: none;
+  border-radius: 20px;
+  font-family: "Changa", cursive;
+  font-weight: 400;
+}
+/* NavBar Responsive  */
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: row;
+  }
+  .navBar h1 {
+    margin-top: 55px;
+    margin-left: 10px;
+    font-size: 22px;
+    width: 15%;
+    display: inline-block;
+    position: absolute;
+  }
+
+  .navBar ul {
+    flex-direction: row;
+    margin-top: 55px;
+    margin-left: 140px;
+    font-size: 14px;
+    width: 55%;
+    padding: 0;
+  }
+
+  .navBar li {
+    margin-top: 12px;
+    font-size: 19px;
+  }
+
+  .navBar button {
+    flex-direction: row;
+    width: 20%;
+    margin-right: 8%;
+    border-radius:10;
+    font-size: 21px;
+    padding: 10px 10px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .navBar {
+    flex-direction: row;
+    align-items: center;
+    border: 5px solid red;
+    width: 100%;
+  }
+
+  .navBar h1 {
+    margin-left: 15px;
+    font-size: 18px;
+    width: 24%;
+    display: inline-block;
+    position: absolute;
+  }
+  .navBar ul {
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 130px;
+    font-size: 14px;
+    width: 60%;
+    padding: 0;
+  }
+  .navBar li {
+    padding: 5px 5px;
+  }
+  .navBar button {
+   display: none;
+  }
+}
+/* Main page starts here */
+.main{
+  width: 100%;
+}
+.right{
+  width: 40%;
+  top: 2%;
+  margin-left: 60%;
+  display: block;
+  /* background-color: aqua; */
+}
+.main img{
+   top: 100px;
+   height: 74vh; 
+   border-radius: 50%;
+   margin-left: -25px;
+}
+.box{
+  width: 34.5%;
+  height: 75vh;
+  border: 5px dashed rgb(19, 211, 102);
+  border-radius: 50%;
+  position: absolute;
+  left: 58%;
+  top: 19%;
+  animation-name: move;
+  animation-duration: 20s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;   
+  animation-fill-mode: backwards;
+} 
+@keyframes move {
+  0%{
+   rotate: 360deg;
+  }
+  25%{
+   rotate:270deg;
+  }
+  50%{
+    rotate: 180deg;
+  }
+  75%{
+    rotate: 90deg;
+  }
+  100%{
+    rotate: 0deg;
+  }
+}
+
+.left{
+  width: 55%;
+  position: absolute;
+  margin-top: -30%;
+  height: 70vh;
+  margin-left: 30px;
+
+}
+.left .mernstack{
+  color: white;
+  font-family: "Changa", cursive;
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 22px;
+  animation-name: movemern;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  width: 300px;
+  animation-fill-mode: both;
+}
+@keyframes movemern{
+0%{
+  margin-left: 0%;
+  color: white;
+}
+50%{
+  margin-left: 12%;
+  color: rgb(19, 211, 102);
+}
+100%{
+  margin-left:0%;
+  color: rgb(19, 211, 102);
+}
+}
+.left h1{
+  color: white;
+  font-family: "Changa", cursive;
+  font-weight: 400;
+  font-size: 90px;
+  margin-top: -3%;
+  margin-left: -5px;
+}
+.left .name{
+  font-family: "Changa", cursive;
+  margin-left: -10px;
+  font-weight: 400;
+  font-size: 170px;
+  line-height: 170px;
+  color: transparent;
+  -webkit-text-stroke: 3px rgb(19, 211, 102);
+  background: url(back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  width: 120%;
+}
+@keyframes back{
+  100%{
+    background-position: 1000px 0;
+  }
+}
+.left p{
+  color: white;
+  width: 90%;
+  font-size: 20px;
+  font-family: "Changa", cursive;
+  font-weight: 300;
+}
+.left button {
+  margin-top: 40px;
+  margin-left: 20px;  
+  padding: 12px 50px;
+  color: rgb(19, 211, 102);
+  margin-right: 60px;
+  border: 2px solid rgb(19, 211, 102);
+  font-weight: 400;
+  font-family: "Changa", cursive;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+.left button:hover{
+  background-color: rgb(19, 211, 102);
+  color: black;
+  font-family: "Changa", cursive;
+  font-size: 20px;
+}
+.left button i{
+  color: rgb(19, 211, 102);
+  margin-left: 7px;
+  font-size: 18px;
+}
+.left button:hover .icon{
+  color: black;
+  background: transparent;
+}
+.icons{
+  /* border: 2px solid white; */
+  display: inline-block;
+  width: 50%;
+}
+.icons i{
+  border:2px solid rgb(19, 211, 102);
+  padding: 12px;
+  margin-right: 30px;
+  color: rgb(19, 211, 102);
+  font-size: 17px;
+  border-radius: 30px;
+}
+.icons i:hover{
+  background-color: rgb(19, 211, 102);
+  color:black;
+}
+.info{
+  width: 100%;
+  margin-top: 180px;
+}
+.numb1{
+  display: inline-block;
+  color: white;
+  font-size: 85px;
+  margin-left: 30px;
+  font-weight: 600;
+  font-family: "Changa",cursive;
+}
+.numbInfo1{
+  width: 10%;
+  position: absolute;
+  margin-top: 35px;
+  display: inline-block;
+  color: white;
+  font-family: "Changa", cursive;
+  font-size: 18px;
+  margin-left: 8px;
+}
+.numb2{
+ 
+  display: inline-block;
+  color: white;
+  font-size: 85px;
+  margin-left: 210px;
+  font-weight: 600;
+  font-family: "Changa",cursive;
+}
+.numbInfo2{
+  width: 10%;
+  position: absolute;
+  margin-top: 35px;
+  display: inline-block;
+  color: white;
+  font-family: "Changa", cursive;
+  font-size: 18px;
+  margin-left: 8px;
+  
+}
+.numb3{
+  display: inline-block;
+  color: white;
+  font-size: 85px; 
+  margin-left: 180px;
+  font-weight: 600;
+  font-family: "Changa",cursive;
+}
+.numbInfo3{
+  width: 10%;
+  position: absolute;
+  margin-top: 36px;
+  display: inline-block;
+  color: white;
+  font-family: "Changa", cursive;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.numb4{
+  display: inline-block;
+  color: white;
+  font-size: 85px; 
+  margin-left: 200px;
+  font-weight: 600;
+  font-family: "Changa",cursive;
+}
+.numbInfo4{
+  position: absolute;
+  margin-top: 45px;
+  display: inline-block;
+  color: white;
+  font-family: "Changa", cursive;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.services{
+  width: 100%;
+  background-color: black;
+  font-family:"Changa",cursive ;
+  margin-top: 30px;
+}
+.services .services1{
+  display: flex;
+} 
+.first{
+  top: 50px;
+  width: 47%;
+  height: 50vh;
+  font-family:"Changa",cursive ;
+  box-shadow: 1px 1px 5px rgb(5, 226, 101);
+  margin-left: 25px;
+  margin-bottom: 20px;
+  height: 50vh;
+}
+.first .number{
+  color: white;
+  font-size: 70px;
+  margin-left: 30px;
+  font-family: "Changa",cursive;
+}
+.first .heading{
+  color: white;
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: "Changa",cursive;
+}
+.first .metainfo{
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 20px;
+  width: 85%;
+}
+/* hover effect  */
+.first:hover .number {
+  color: rgb(5, 226, 101);
+}
+.first:hover .arrow{
+  border: 3px solid rgb(5, 226, 101);
+  rotate: 90deg;
+} 
+.first:hover .heading{
+  color: rgb(5, 226, 101);
+}
+
+.second{
+  top: 50px;
+  width: 47%;
+  height: 50vh;
+  font-family:"Changa",cursive ;
+  box-shadow: 1px 1px 5px rgb(5, 226, 101);
+  margin-left: 30px;
+  margin-bottom: 20px;
+  height: 50vh;
+}
+.second .number{
+  color: white;
+  font-size: 75px;
+  margin-left: 30px;
+  font-family: "Changa",cursive;
+}
+.second .heading {
+  color: white;
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: "Changa",cursive;
+}
+.second .metainfo{
+  color: white;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 20px; 
+  width: 85%;
+}
+.second:hover .number {
+  color: rgb(5, 226, 101);
+}
+.second:hover .arrow{
+  border: 3px solid rgb(5, 226, 101);
+  rotate: 90deg;
+} 
+.second:hover .heading{
+  color: rgb(5, 226, 101);
+}
+.services2{
+  display: flex;
+}
+.third{
+  top: 50px;
+  width: 47%;
+  height: 50vh;
+  font-family:"Changa",cursive ;
+  box-shadow: 1px 1px 5px rgb(5, 226, 101);
+  margin-left: 25px;
+  margin-bottom: 20px;
+  height: 50vh;
+}
+.third .number{
+  color: white;
+  font-size: 75px;
+  margin-left: 30px;
+  font-family: "Changa",cursive;
+
+}
+.third .heading{
+  color: white;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 30px;
+}
+.third .metainfo{
+  color: white;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 20px; 
+  width: 85%;
+}
+/* Hover effect */
+.third:hover .number {
+  color: rgb(5, 226, 101);
+}
+.third:hover .arrow{
+  border: 3px solid rgb(5, 226, 101);
+  rotate: 90deg;
+} 
+.third:hover .heading{
+  color: rgb(5, 226, 101);
+}
+.fourth{
+  top: 50px;
+  width: 47%;
+  height: 50vh;
+  font-family:"Changa",cursive ;
+  box-shadow: 1px 1px 5px rgb(5, 226, 101);
+  margin-left: 30px;
+  margin-bottom: 20px;
+  height: 50vh;
+}
+.fourth .number{
+  color: white;
+  font-size: 75px;
+  margin-left: 30px;
+  font-family: "Changa",cursive;
+}
+.fourth .heading{
+  color: white;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 30px;
+}
+.fourth .metainfo{
+  color: white;
+  margin-left: 20px;
+  font-family: "Changa",cursive;
+  font-size: 20px; 
+  width: 85%;
+}
+/* Hover Effect  */
+.fourth:hover .number {
+  color: rgb(5, 226, 101);
+}
+.fourth:hover .arrow{
+  border: 3px solid rgb(5, 226, 101);
+  rotate: 90deg;
+} 
+.fourth:hover .heading{
+  color: rgb(5, 226, 101);
+}
+.first .arrow , .second .arrow ,.third .arrow , .fourth .arrow {
+  margin-left: 380px;
+  border: 3px solid #fff;
+  border-radius: 55px;
+  padding: 5px 8px;
+  font-size: 40px;
+}
+.resume{
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+
+.leftside{
+  margin-top: 30px;
+  width: 30%;
+  height: 350vh;
+}
+.experience{
+  background-color:rgb(20, 221, 107) ;
+  color: white;
+  width: 75%;
+  height: 8vh;
+  margin-left: 50px;
+  margin-top: 160px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.experience p {
+  background-color:rgb(20, 221, 107);
+  color: black;
+  margin-left: 90px;
+  font-weight: 540;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.education{
+  background-color:rgb(20, 221, 107) ;
+  color: white;
+  width: 75%;
+  height: 8vh;
+  margin-left: 50px;
+  padding: 10px;
+  margin-top: 150%;
+  border-radius: 10px;
+}
+.education p{
+  background-color:rgb(20, 221, 107) ;
+  color: black;
+  margin-left: 90px;
+  font-weight: 540;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.skills{
+  background-color:rgb(20, 221, 107) ;
+  color: white;
+  width: 75%;
+  height: 8vh;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 155%;
+}
+.skills p{
+  background-color:rgb(20, 221, 107) ;
+  color: black;
+  margin-left: 90px;
+  font-weight: 540;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 5px; 
+}
+.about{
+  background-color:rgb(20, 221, 107) ;
+  color: white;
+  width: 75%;
+  height: 8vh;
+  margin-left: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 450px;
+}
+.about p{
+  background-color:rgb(20, 221, 107) ;
+  color: black;
+  margin-left: 90px;
+  font-weight: 540;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 5px; 
+}
+
+.rightside{
+  width: 70%;
+}
+.hidden-div-Experience{
+  width: 90%;
+  height: 75vh;
+  top: 130px; 
+}
+.hidden-div-Experience h2{
+    margin-top: 12px;
+    margin-left: 30px;
+    font-size: 37px;
+    font-family: "Changa",cursive;
+    color:white;
+ }
+ .hidden-div-Experience p{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 70%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+  color: rgb(100, 121, 109);
+ }
+ .hidden-div-Experience .infosection{
+  width: 42%;
+  margin-left: 35px;
+  box-shadow: 1px 1px 12px rgb(116, 120, 117);
+  border-radius: 15px;
+  height: 35vh;
+ }
+ .hidden-div-Experience .infosection p{
+  padding-top: 10px;
+  color: rgb(52, 216, 123);
+ }
+ .hidden-div-Experience .infosection h3{
+  margin-left: 30px;
+  font-family: "Changa",cursive;  
+  font-size: 23px;
+  color: white;
+  margin-top: -10px;
+ }
+
+.hidden-div-Experience .infosection ul{
+  list-style-type: disc;
+}
+.hidden-div-Experience .infosection li::marker{
+  color:rgb(52, 216, 123);
+}
+.infosection li{
+  margin-left: 45px;
+  font-family: "Changa",cursive;
+  color: white;
+} 
+.hidenDiv-Education{
+  width: 90%;
+  height: 100vh;
+  top: 130px; 
+  margin-left: 30px;
+  /* border: 2px solid white; */
+}
+
+.hidenDiv-Education h2{
+    margin-top: 12px;
+    margin-left: 30px;
+    font-size: 37px;
+    font-family: "Changa",cursive;
+    color:white;
+}
+.hidenDiv-Education p{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 70%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+  color: rgb(100, 121, 109);
+}
+.sectionone{
+  width: 100%;
+  display: flex;
+  height: 45vh;
+}
+.uni{
+  width: 45%;
+   height: 40vh;
+   margin-top: 10px;
+   margin-left: 35px;
+   box-shadow: 1px 1px 15px rgb(52, 216, 123);
+}
+.uni h5{
+  color: rgb(52, 216, 123);
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;
+}
+.uni h2{
+  color:white;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;  
+}
+.uni li{
+  color: white;
+  font-family: "Changa",cursive;
+  margin-left: 45px;
+  margin-top: 5px;
+}
+.uni li::marker{
+  color:rgb(52, 216, 123);
+}
+.college{
+  width: 45%;
+   height: 40vh;
+   margin-top: 10px;
+   margin-left: 45px;
+   box-shadow: 1px 1px 15px rgb(52, 216, 123);
+}
+.college h5{
+  color: rgb(52, 216, 123);
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;
+}
+.college h2{
+  color:white;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Changa",cursive;
+  margin-left: 30px; 
+}
+.college li{
+  color: white;
+  font-family: "Changa",cursive;
+  margin-left: 45px;
+  margin-top: 25px;
+}
+.college li::marker{
+  color:rgb(52, 216, 123);
+}
+.sectionTwo{
+  width: 100%;
+  display: flex;
+  height: 45vh;
+}
+.school {
+  width: 45%;
+  height: 40vh;
+  margin-top: 10px;
+  margin-left: 35px;
+  box-shadow: 1px 1px 15px rgb(52, 216, 123);
+}
+.school h5{
+  color: rgb(52, 216, 123);
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;
+}
+.school h2{
+  color:white;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;  
+}
+.school li{
+  color: white;
+  font-family: "Changa",cursive;
+  margin-left: 45px;
+  margin-top: 5px;
+}
+.school li::marker{
+  color:rgb(52, 216, 123);
+}
+.coding{
+  width: 45%;
+   height: 40vh;
+   margin-top: 10px;
+   margin-left: 45px;
+   box-shadow: 1px 1px 15px rgb(52, 216, 123);
+}
+.coding h5{
+  color: rgb(52, 216, 123);
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Changa",cursive;
+  margin-left: 30px;
+}
+.coding h2{
+  color:white;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Changa",cursive;
+  margin-left: 30px; 
+}
+.coding li{
+  color: white;
+  font-family: "Changa",cursive;
+  margin-left: 45px;
+  margin-top: 5px;
+}
+.coding li::marker{
+  color: rgb(52, 216, 123);
+}
+.hiddenDiv-Skills{
+  width: 87%;
+  height: 100vh;
+  margin-top: 160px; 
+  margin-left: 65px;
+  /* border: 2px solid white;  */
+}
+.hiddenDiv-Skills h2{
+  margin-top: 12px;
+  margin-left: 30px;
+  font-size: 35px;
+  font-family: "Changa",cursive;
+  color:white;
+}
+.hiddenDiv-Skills p{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 70%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+  color: rgb(100, 121, 109); 
+}
+.icons1{
+  display: flex;
+  margin-top: 30px;
+}
+.react{
+   width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 20px;
+   font-family: "Changa",cursive;
+}
+.react i{
+  color: white;
+  font-size: 80px;
+  margin-top: 18px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: rgb(24, 23, 23);
+}
+.javascript{
+  width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 19px;
+   font-family: "Changa",cursive;
+}
+.javascript i {
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.bootstrap {
+  width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 20px;
+   font-family: "Changa",cursive;
+}
+.bootstrap i{
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.html {
+  width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 20px;
+   font-family: "Changa",cursive;
+}
+.html i{
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.css{
+  width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 20px;
+   font-family: "Changa",cursive;
+}
+.css i{
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.php{
+  width: 20%;
+   height: 26vh;
+   margin-left: 20px;
+   color: rgb(52, 216, 123);
+   background-color: rgb(24, 23, 23);
+   text-align: center;
+   font-size: 20px;
+   font-family: "Changa",cursive;
+}
+.php i{
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.python{
+  width: 20%;
+  height: 26vh;
+  margin-left: 20px;
+  color: rgb(52, 216, 123);
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  font-size: 20px;
+  font-family: "Changa",cursive;  
+}
+.python i{
+  color: white;
+  font-size: 64px;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 17px;
+  background-color: rgb(24, 23, 23);
+}
+.ts{
+  width: 20%;
+  height: 26vh;
+  margin-left: 20px;
+  color: rgb(52, 216, 123);
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  font-size: 18px;
+  font-family: "Changa",cursive;  
+}
+.ts img{
+  color: white;
+  width: 70px;
+  margin-top: 30px;
+  display: block;
+  margin-left: 35px;
+  margin-bottom: 9px;
+  
+  border-radius: 10px;
+}
+.aboutbox {
+  display: flex;
+}
+.hiddenDiv-About{
+  width: 87%;
+  height: 65vh;
+  margin-top:-60px; 
+  margin-left: 25px;
+}
+.hiddenDiv-About h2 {
+  margin-top: 12px;
+  margin-left: 30px;
+  font-size: 35px;
+  font-family: "Changa",cursive;
+  color:white;
+}
+.hiddenDiv-About p{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 70%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+  color: rgb(100, 121, 109);
+}
+.hiddenDiv-About .leftdiv{
+  position: relative;
+  /* border: 2px solid white; */
+  width: 50%;
+  height: 10vh;
+  margin-top: 20px;
+}
+.leftdiv .name{
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px;
+}
+.name span{
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.leftdiv .email{
+  margin-top: 20px;
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px;
+}
+.email span {
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.leftdiv .freelancing{
+  margin-top: 20px;
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px;
+}
+.freelancing span {
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.hiddenDiv-About .rightdiv{
+  width: 50%;
+  height: 30vh; 
+  margin-top: 20px;
+}
+.rightdiv .phone{
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px;
+}
+.phone span{
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.rightdiv .remote{
+  margin-top: 20px;
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px; 
+}
+.remote span{
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.rightdiv .city{
+  margin-top: 20px;
+  color:rgb(100, 121, 109);
+  font-size: 20px;
+  font-family:"Changa",cursive;
+  margin-left: 30px; 
+}
+.city span {
+  color: white;
+  font-family:"Changa",cursive;
+  margin-left: 15px;
+}
+.work {
+  width: 100%;
+  height: 100vh;
+  /* border: 2px solid purple; */
+}
+.project1{
+  width: 100%;
+  height: 90vh;
+  /* border: 2px solid white; */
+  display: flex;
+}
+.project1 .Left{
+  width: 45%;
+  height: 85vh;
+  /* border: 2px solid white; */
+  margin-top: 15px;
+}
+.project1 .Left h1{
+  margin-left: 30px;
+  font-size: 95px;
+  font-family: "Changa",cursive;
+  color:white;
+  font-weight: 500;
+}
+.project1 .Left h2{
+  font-size: 35px;
+  font-family: "Changa",cursive;
+  color: white;
+  margin-left: 30px;
+  margin-top: -30px;
+  font-weight: 300;
+}
+.project1 .Left p{
+  margin-left: 30px;
+  font-size: 20px;
+  width: 90%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+  color: rgb(100, 121, 109); 
+}
+.project1 .Left span{
+  color: rgb(52, 216, 123);
+  margin-left: 30px;
+  font-size: 20px;
+  width: 90%;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family:"Changa",cursive;
+}
+.project1 .Left hr{
+  margin-top: 30px;
+  border: 1px solid white;
+  margin-left: 30px;
+}
+.project1 .Left .github{
+  width: 10%;
+  border: none;
+  margin-left: 40px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+.github i{
+  color: white;
+  font-size: 25px;
+  padding:20px;
+  background-color: rgb(49, 52, 50);
+  border-radius: 40px;
+}
+.project1 .Left .link{
+  width: 10%;
+  margin-left: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: transparent;
+}
+.project1 .Left .link i{
+  color: white;
+  font-size: 23px;
+  padding:20px;
+  background-color: rgb(49, 52, 50);
+  border-radius: 40px;
+}
+.project1 .Right {
+  width: 54%;
+  height: 85vh;
+  margin-top: 15px;
+}
+.project1 .Right video{
+  height: 80vh;
+  width: 98%;
+  margin-left: 10px;
+}
+.contactDiv{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.leftContainer{
+  /* border: 2px solid white; */
+  width: 53%;
+  height: 95vh;
+  background-color: rgb(39, 44, 39);
+  margin-left: 3%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.leftContainer h1{
+  color: rgb(52, 216, 123);
+  font-family:"Changa",cursive;
+  font-size: 35px;
+  margin-left: 20px;
+  font-weight: 350;
+}
+.leftContainer h3{
+  color: rgb(138, 157, 146);
+  font-family:"Changa",cursive;
+  font-size: 20px;
+  margin-left: 20px; 
+  font-weight: 200;
+}
+.firstrow{
+  display: flex;
+  margin-top: 20px;
+}
+.firstrow .firstname{
+  width: 40%;
+  height: 8vh;
+  color: white;
+  background-color: rgb(28, 27, 27);
+  margin-left: 15px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 10px;
+  font-family:"Changa",cursive;
+} 
+.firstrow .firstname::placeholder{
+  font-size: 18px;
+}
+.firstrow .firstname:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.firstrow .lastname{
+  width: 40%;
+  height: 8vh;
+  color: black;
+  background-color: rgb(28, 27, 27);
+  margin-right: 40px;
+  border: none;
+  font-family:"Changa",cursive;
+  border-radius: 10px;
+}
+.firstrow .lastname::placeholder{
+  font-size: 18px;
+}
+.firstrow .lastname:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.secondrow{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.secondrow .email{
+  width: 40%;
+  height: 8vh;
+  color: white;
+  background-color: rgb(28, 27, 27);
+  margin-left: 15px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 10px;
+  font-family:"Changa",cursive;
+}
+.secondrow .email::placeholder{
+  font-size: 18px;
+} 
+.secondrow .email:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.secondrow .number{
+  width: 40%;
+  height: 8vh;
+  color: white;
+  background-color: rgb(28, 27, 27);
+  margin-left: 2px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 10px;
+  font-family:"Changa",cursive;
+}
+.secondrow .number::placeholder{
+  font-size: 18px;
+} 
+.secondrow .number:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.leftContainer .select{
+  width: 85%;
+  height: 8vh;
+  color: rgb(169, 164, 164);
+  background-color: rgb(28, 27, 27);
+  margin-left: 16px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 10px;
+  font-family:"Changa",cursive;
+  font-size: 17px;
+  text-align:center;
+  margin-bottom: 10px;
+}
+.leftContainer .select:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.leftContainer .textarea{
+  width: 85%;
+  height: 30vh;
+  color: rgb(169, 164, 164);
+  background-color: rgb(28, 27, 27);
+  margin-left: 16px;
+  margin-right: 30px;
+  border-radius: 10px;
+  font-family:"Changa",cursive;
+  margin-bottom: 10px;
+  border: none;
+}
+.leftContainer .textarea::placeholder{
+  font-size: 18px;
+  color: white;
+}
+.leftContainer .textarea:hover{
+  border: none;
+  border: 2px solid rgb(52, 216, 123);
+  border-radius: 10px;
+}
+.rightContainer{
+  width: 45%;
+  height: 95vh;
+}
